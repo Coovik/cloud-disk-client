@@ -1,0 +1,36 @@
+@use '../../../../utils/font-sizes'
+@use '../../../../utils/colors'
+@use '../../../../utils/mixins'
+.file
+   height: 40px
+   display: grid
+   grid-template: 1fr/ 1fr 4fr repeat(4,1fr)
+   align-items: center
+   justify-items: center
+   // cursor: pointer
+   & > div
+      height: font-sizes.$usual-font-size
+   &_img
+      width: 40px
+   &_name
+      grid-column-start: 2
+      justify-self: start
+   &_download,&_delete
+      width: 24px
+      cursor: pointer
+      display: none
+   &:hover>&_download,&:hover>&_delete
+      display: block
+   &_download
+      grid-column-start: 3
+      justify-self: end
+   &_delete
+      grid-column-start: 4
+   &_date
+      grid-column-start: 5
+   &_size
+      grid-column-start: 6
+   &:hover
+      transition: 0.2s
+      background-color: #fff
+      @include mixins.darkerbg($bg-color: colors.$bg-color )

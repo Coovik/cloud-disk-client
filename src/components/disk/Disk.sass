@@ -1,0 +1,80 @@
+@use '../../utils/colors'
+@use '../../utils/font-sizes'
+.disk
+   margin-top: 20px
+   display: grid
+   grid-template: 40px 1fr / 1fr
+   &_btns
+      display: flex
+      height: 30px
+      .btn
+         cursor: pointer
+         margin-left: 10px
+      .btn:first-child
+         margin-left: 0
+   &_back
+   &_create
+   &_upload
+   &_upload-input
+      display: none
+   &_upload-label
+      display: block
+      padding: 5px
+      border: 2px solid colors.$font-color
+   &_sort
+
+.popup
+   position: absolute
+   left: 0
+   top: 0
+   width: 100%
+   background-color: rgba(0, 0, 0, 0.2)
+   display: flex
+   justify-content: center
+   align-items: center
+   &_content
+      display: flex
+      flex-direction: column
+      width: 25vw
+      height: 25vh
+      padding: 20px
+      border-radius: 10px
+      background-color: colors.$bg-color
+   &_header
+   &_title
+      font-size: font-sizes.$title-font-size
+   &_close
+      position: relative
+      width: 100%
+      height: 0px
+      &::before,
+      &::after
+         content: ''
+         position: absolute
+         top: 0
+         right: -10px
+         width: 15px
+         height: 2px
+         background-color: colors.$font-color
+         transform: rotate(45deg)
+         cursor: pointer
+      &::after
+         transform: rotate(-45deg)
+   input
+      height: 10vh
+      padding: 5px
+      &:focus
+         outline: none
+   &_btn
+      margin-top: 20px
+      height: 25px
+      width: 100px
+      align-self: end
+.drop-area
+   height: calc( 100vh - 80px - 40px )
+   margin: 20px
+   display: grid
+   justify-content: center
+   align-content: center
+   font-size: font-sizes.$header-font-size
+   border: 3px dotted colors.$font-color

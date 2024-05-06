@@ -1,0 +1,20 @@
+//>imports
+@use '../../utils/colors'
+@use '../../utils/font-sizes'
+//>mixins
+//>styles
+.navbar
+   display: grid
+   grid-template: 1fr / 100px 1fr repeat(2, minmax(10px, 100px))
+   height: 80px
+   align-items: center
+   div
+      height: font-sizes.$usual-font-size
+   &_logo
+      display: block
+      height: 80px
+   &_title
+      font-size: font-sizes.$header-font-size
+      height: font-sizes.$header-font-size
+   &_login
+   &_registration

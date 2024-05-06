@@ -1,0 +1,19 @@
+@use '../../../utils/font-sizes'
+.filelist
+   margin: 20px 0
+   display: grid
+   grid-template: 40px 1fr / 1fr
+   &_header
+      align-self: center
+      display: grid
+      grid-template: 1fr/ 1fr 4fr repeat(4,1fr)
+      align-items: center
+      justify-items: center
+      height: font-sizes.$usual-font-size
+   &_name
+      grid-column-start: 2
+      justify-self: start
+   &_date
+      grid-column-start: 5
+   &_size
+      grid-column-start: 6

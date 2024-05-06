@@ -1,0 +1,22 @@
+//>imports
+@use '../../utils/font-sizes'
+@use '../../utils/colors'
+//>mixins
+//>styles
+.registration
+   display: grid
+   align-content: center
+   justify-content: center
+   grid-template: repeat(4, minmax(10px,40px)) / minmax(10%,30%)
+   grid-gap: 15px
+   *
+      border: none
+   &_header
+      font-size: font-sizes.$header-font-size
+      justify-self: center
+   input
+      padding: 5px
+      &:focus
+         outline: none
+   &_btn
+      cursor: pointer
